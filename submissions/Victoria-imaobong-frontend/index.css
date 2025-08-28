@@ -1,0 +1,12 @@
+:root{
+    --primary-color: white;
+    --secondary-color: rgb(89, 169, 223);
+}
+*
+{
+    background-color: white;
+}
+
+section{
+    border: 1px solid var(--secondary-color);
+}
