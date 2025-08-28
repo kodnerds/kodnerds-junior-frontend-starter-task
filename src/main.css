@@ -1,0 +1,185 @@
+/* Card meta info styling */
+.card-meta {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 10px;
+    font-size: 0.98rem;
+}
+.meta-link {
+    color: #b0bec5;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.meta-link:hover {
+    color: #90caf9;
+}
+.meta-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.1em;
+}
+.learn-more-link {
+    color: #90caf9;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 8px;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.learn-more-link:hover {
+    color: #42a5f5;
+    text-decoration: underline;
+}
+/* Energy message styling */
+.energy-message {
+    margin: 32px auto 0 auto;
+    max-width: 700px;
+    background: #23272f;
+    border-radius: 10px;
+    padding: 24px 18px 20px 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    text-align: center;
+}
+.energy-message h3 {
+    color: #90caf9;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.energy-message p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+/* Page index styling */
+.page-index {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #90caf9;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 32px 0 0 0;
+}
+
+.pagination button {
+    min-width: 32px;
+    height: 32px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    color: #222;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.pagination button.active {
+    background: #1976d2;
+    color: #fff;
+    border: 1px solid #1976d2;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+/* 2 by 3 image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    max-width: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    justify-self: center;
+    align-self: center;
+    transition: box-shadow 0.2s;
+}
+
+.card {
+    background: #23272f;
+    border: 1px solid #111;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 10px 20px 10px;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+}
+
+.card-text {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+body {
+    background: #181a20;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #e0e0e0;
+    min-height: 100vh;
+}
+
+.whole-page {
+    padding: 24px 0 0 0;
+}
+
+@media (max-width: 900px) {
+    .image-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .image-grid img {
+        max-width: 48vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 12px;
+    }
+    .image-grid img {
+        max-width: 90vw;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+}
