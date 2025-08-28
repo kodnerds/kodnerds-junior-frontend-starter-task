@@ -1,0 +1,48 @@
+/* 2 by 3 image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.image-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    max-width: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    justify-self: center;
+    align-self: center;
+    transition: box-shadow 0.2s;
+}
+
+@media (max-width: 900px) {
+    .image-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .image-grid img {
+        max-width: 48vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 12px;
+    }
+    .image-grid img {
+        max-width: 90vw;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+}
